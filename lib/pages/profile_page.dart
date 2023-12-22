@@ -62,7 +62,6 @@ class _ProfilePageState extends State<ProfilePage> {
         body: SafeArea(
           child: Column(
             children: [
-              SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -123,11 +122,42 @@ class _ProfilePageState extends State<ProfilePage> {
                 ],
               ),
 
+              const SizedBox(height: 20),
+
               // Name
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Fachry Dwi Handoko ',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 5),
 
               // Bio
+              Text(
+                'Frontend x Mobile Developer • UI/UX Designer',
+                style: TextStyle(
+                  color: Colors.grey[600],
+                  fontWeight: FontWeight.w400
+                ),
+              ),
+
+              const SizedBox(height: 5),
 
               // Link
+              Text(
+                'Connect with Me',
+                style: TextStyle(
+                  color: Colors.blue[500],
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+
+              const SizedBox(height: 20),
 
               // Buttons
 
