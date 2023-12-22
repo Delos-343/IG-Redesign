@@ -2,6 +2,10 @@
 
 import 'package:flutter/material.dart';
 
+import '../tabs/feed_view.dart';
+import '../tabs/reels_view.dart';
+import '../tabs/tagged_view.dart';
+
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
