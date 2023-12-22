@@ -10,26 +10,58 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+
+  final List<Widget> tabs = const [
+
+    // Feed
+    Tab(
+      icon: Icon(
+        Icons.image,
+        color: Colors.blueGrey,
+      ),
+    ),
+
+    // Reels 
+    Tab(
+      icon: Icon(
+        Icons.video_collection,
+        color: Colors.blueGrey,
+      ),
+    ),
+
+    // Tagged
+    Tab(
+      icon: Icon(
+        Icons.bookmark,
+        color: Colors.blueGrey,
+      ),
+    ),
+  ];
+
+  // Tab Bar Views
+  final List<Widget> tabBarViews = const [
+
+    // Feed View
+    FeedView(),
+
+    // Reels View
+    ReelsView(),
+
+    // Tagged View
+    TaggedView(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
         body: Column(
-          children: const [
+          children: [
             TabBar(
-              tabs: [
-                Tab(
-                  icon: Icon(Icons.home),
-                ),
-                Tab(
-                  icon: Icon(Icons.home),
-                ),
-                Tab(
-                  icon: Icon(Icons.home),
-                ),
-              ]
-          )
+              tabs: tabs,
+          ),
+          TabBarView(children: tabBarViews)
           ],
         ),
       ),
