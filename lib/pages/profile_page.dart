@@ -58,13 +58,76 @@ class _ProfilePageState extends State<ProfilePage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        body: Column(
-          children: [
-            TabBar(
-              tabs: tabs,
+        appBar: AppBar(),
+        body: SafeArea(
+          child: Column(
+            children: [
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Following
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        '1532',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        'Following',
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+          
+                  // Profile Picture
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.blueGrey[100],
+                      ),
+                    ),
+                  ),
+          
+                  // Followers
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '1574',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        'Followers',
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              TabBar(
+                tabs: tabs,
+            ),
+            Expanded(child: TabBarView(children: tabBarViews))
+            ],
           ),
-          TabBarView(children: tabBarViews)
-          ],
         ),
       ),
     );
