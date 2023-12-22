@@ -12,6 +12,27 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        body: Column(
+          children: const [
+            TabBar(
+              tabs: [
+                Tab(
+                  icon: Icon(Icons.home),
+                ),
+                Tab(
+                  icon: Icon(Icons.home),
+                ),
+                Tab(
+                  icon: Icon(Icons.home),
+                ),
+              ]
+          )
+          ],
+        ),
+      ),
+    );
   }
 }
