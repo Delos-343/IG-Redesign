@@ -122,6 +122,16 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ],
               ),
+
+              // Name
+
+              // Bio
+
+              // Link
+
+              // Buttons
+
+              // Tab Bar
               TabBar(
                 tabs: tabs,
             ),
