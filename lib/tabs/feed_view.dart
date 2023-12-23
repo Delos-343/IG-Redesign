@@ -6,13 +6,19 @@ class FeedView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MasonryGridView.builder(
-      itemCount: 6,
-      physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2),
-      itemBuilder: (context, index) =>
-        Image.asset('lib/img/image${index + 1}.jpg'),
+    return Padding(
+      padding: const EdgeInsets.all(2.0),
+      child: MasonryGridView.builder(
+        itemCount: 6,
+        physics: const NeverScrollableScrollPhysics(),
+        gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2),
+        itemBuilder: (context, index) =>
+          Padding(
+            padding: const EdgeInsets.all(2.0),
+            child: Image.asset('lib/img/image${index + 1}.jpg'),
+          ),
+      ),
     );
   }
 }
