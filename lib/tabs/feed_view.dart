@@ -7,7 +7,7 @@ class FeedView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(2.0),
+      padding: const EdgeInsets.symmetric(horizontal: 2.0),
       child: MasonryGridView.builder(
         itemCount: 6,
         physics: const NeverScrollableScrollPhysics(),
@@ -16,7 +16,10 @@ class FeedView extends StatelessWidget {
         itemBuilder: (context, index) =>
           Padding(
             padding: const EdgeInsets.all(2.0),
-            child: Image.asset('lib/img/image${index + 1}.jpg'),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(4),
+                child: Image.asset('lib/img/image${index + 1}.jpg'),
+              ),
           ),
       ),
     );
