@@ -60,7 +60,7 @@ class _ProfilePageState extends State<ProfilePage> {
       child: Scaffold(
         appBar: AppBar(),
         body: SafeArea(
-          child: Column(
+          child: ListView(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -144,6 +144,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   color: Colors.grey[600],
                   fontWeight: FontWeight.w400
                 ),
+                textAlign: TextAlign.center,
               ),
 
               const SizedBox(height: 5),
@@ -155,6 +156,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   color: Colors.blue[500],
                   fontWeight: FontWeight.bold
                 ),
+                textAlign: TextAlign.center,
               ),
 
               const SizedBox(height: 20),
@@ -203,8 +205,11 @@ class _ProfilePageState extends State<ProfilePage> {
               // Tab Bar
               TabBar(
                 tabs: tabs,
-            ),
-            Expanded(child: TabBarView(children: tabBarViews))
+              ),
+              SizedBox(
+                height: 1000,
+                child: TabBarView(children: tabBarViews),
+              ),
             ],
           ),
         ),
