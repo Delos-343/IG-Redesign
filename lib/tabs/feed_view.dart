@@ -7,11 +7,11 @@ class FeedView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MasonryGridView.builder(
-      itemCount: 10,
+      itemCount: 6,
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2),
-      itemBuilder: (context, index) => Image.asset('lib/img/humanity.jpg'),
+      itemBuilder: (context, index) => Image.asset('lib/img/image${index + 1}.jpg'),
     );
   }
 }

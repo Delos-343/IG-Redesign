@@ -58,7 +58,6 @@ class _ProfilePageState extends State<ProfilePage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        appBar: AppBar(),
         body: ListView(
           children: [
             Row(
