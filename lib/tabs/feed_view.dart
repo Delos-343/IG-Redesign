@@ -11,7 +11,8 @@ class FeedView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2),
-      itemBuilder: (context, index) => Image.asset('lib/img/image${index + 1}.jpg'),
+      itemBuilder: (context, index) =>
+        Image.asset('lib/img/image${index + 1}.jpg'),
     );
   }
 }
