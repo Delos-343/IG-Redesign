@@ -128,7 +128,7 @@ class _ProfilePageState extends State<ProfilePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Fachry Dwi Handoko ',
+                  'ur_username ',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
@@ -138,7 +138,7 @@ class _ProfilePageState extends State<ProfilePage> {
         
             // Bio
             Text(
-              'Frontend x Mobile Developer • UI/UX Designer',
+              'A Flutter Redesign',
               style: TextStyle(
                 color: Colors.grey[600],
                 fontWeight: FontWeight.w400
